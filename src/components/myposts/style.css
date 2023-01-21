@@ -1,0 +1,98 @@
+body{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form{
+    background-color: white;
+    border-radius: 5px;
+    width: 80vw;
+    margin: 100px auto;
+    padding: 20px;
+    /* height: 600px; */
+}
+
+.form-body{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 100%;
+}
+
+.form_input{
+    width: 100%;
+}
+.title{
+    width:60%;
+    margin-top: 15px;
+}
+.url{
+    margin-top: 15px;
+    width:60%;
+}
+.member{
+    margin-top: 15px;
+    width:60%;
+}
+.detail{
+    margin-top: 15px;
+    width:60%;
+}
+.title input{
+    height: 20px;
+    width:100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1px solid grey;
+}
+.url input{
+    padding-left: 10px;
+    border: 1px solid grey;
+    height: 20px;
+    border-radius: 10px;
+    width:100%;
+}
+.member input{
+    padding-left: 10px;
+    border: 1px solid grey;
+    height: 20px;
+    border-radius: 10px;
+    width:100%;
+}
+.detail input{
+    border: 1px solid grey;
+    padding-left: 10px;
+    border-radius: 10px;
+    height: 60px;
+    width:100%;
+}
+
+.footer{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.footer button{
+    width: 80%; 
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    height: 30px !important;
+
+}
+.footer button:hover{
+    background-color: rgb(218, 221, 221);
+}
