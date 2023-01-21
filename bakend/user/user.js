@@ -1,10 +1,10 @@
 let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
-  
+
 // user Model
 const userSchema = require("./user.model");
-  
+
 // CREATE user
 router.post("/create-user", (req, res, next) => {
   userSchema.create(req.body, (error, data) => {
@@ -16,7 +16,7 @@ router.post("/create-user", (req, res, next) => {
     }
   });
 });
-  
+
 // READ Students
 router.get("/", (req, res) => {
   userSchema.find((error, data) => {
@@ -27,14 +27,13 @@ router.get("/", (req, res) => {
     }
   });
 });
-  
+
 // UPDATE user
 router
   .route("/update-user/:id")
   // Get Single user
   .get((req, res) => {
-    userSchema.findById(
-        req.params.id, (error, data) => {
+    userSchema.findById(req.params.id, (error, data) => {
       if (error) {
         return next(error);
       } else {
@@ -42,7 +41,7 @@ router
       }
     });
   })
-  
+
   // Update user Data
   .put((req, res, next) => {
     userSchema.findByIdAndUpdate(
@@ -61,12 +60,10 @@ router
       }
     );
   });
-  
+
 // Delete user
-router.delete("/delete-user/:id", 
-(req, res, next) => {
-  userSchema.findByIdAndRemove(
-      req.params.id, (error, data) => {
+router.delete("/delete-user/:id", (req, res, next) => {
+  userSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -76,5 +73,5 @@ router.delete("/delete-user/:id",
     }
   });
 });
-  
+
 module.exports = router;

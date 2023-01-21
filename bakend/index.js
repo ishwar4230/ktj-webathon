@@ -14,4 +14,4 @@ app.listen(PORT, function(error)  {
 );
 
 // installation
-// npm i mongoose body-parser
+// npm i mongoose body-parser express 
