@@ -35,20 +35,17 @@ body{
     width: 100%;
 }
 .footer{
-    width: 100%;
+    width: 60%;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
-    max-width: 500px;
 }
 .button{
-    width: 200px !important;
-    margin: auto; 
+    width: 40% !important; 
     border: 1px solid grey;
     border-radius: 15px;
     background-color: whitesmoke;
     height: 30px !important;
-    color: black;
 
 }
 .button:hover{
@@ -58,6 +55,5 @@ body{
 }
 
 .form__input{
-    width: 80vw !important; 
-    min-width: 200px;
+    width: 200px !important; 
 }

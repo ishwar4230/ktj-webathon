@@ -1,0 +1,73 @@
+.arbody{
+    /* background-color: yellowgreen; */
+    min-height: 100vh;
+
+}
+.arleft{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    padding-left:10px; 
+    border-radius: 15px;
+
+}
+.arright{
+width: 20%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.arperson{
+/* background-color: aqua; */
+padding-left: 10px;
+width: 90vw !important;
+margin: auto;
+margin-top: 20px;
+min-height: 100px;
+border-radius: 15px;
+max-width: 700px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.accept{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accept:hover{
+    background-color: rgb(36, 144, 50);
+    transition: 0.2s;
+    color: white;
+    /* border: 1px solid white; */
+}
+.reject{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reject:hover{
+    background-color: rgb(245, 51, 51);
+    transition: 0.2s;
+    color: white;
+    /* border: 1px solid white; */
+}
+
+@media screen and (max-width: 600px) {
+    .arright{
+        flex-direction: column;
+    }
+    
+}
