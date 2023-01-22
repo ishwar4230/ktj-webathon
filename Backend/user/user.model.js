@@ -10,6 +10,9 @@ let userSchema = new Schema({
       type: String,
       require
   },
+  posts:[{
+      type: String  // post Id of the post created by the user
+  }],
 }, {
     collection: 'Users'
   })
