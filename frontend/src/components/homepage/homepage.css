@@ -1,10 +1,6 @@
 .homebody{
     width: 100%;
-    height: auto;
-    min-height: 100vh;
-    background: linear-gradient(to right, #a4ccf5, #bdc3c7);
-    padding: 20px 0;
-}
+    background: linear-gradient(to right, #a4ccf5, #dbdbdb);}
 .posts{
     margin-top: 20px;
     width: 80%;
