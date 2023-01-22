@@ -1,8 +1,5 @@
 body{
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+    background: linear-gradient(to right, #a4ccf5, #dbdbdb);}
 
 .form{
     background-color: white;
@@ -58,6 +55,9 @@ body{
 }
 
 .form__input{
-    width: 80vw !important; 
+    width: 60vw !important; 
     min-width: 200px;
+    max-width: 500px;
+    border: 1px solid rgb(222, 222, 222);
+    padding: 2px 5px;
 }

@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
-
 function Navbar() {
   const navRef = useRef();
 
@@ -24,7 +23,7 @@ function Navbar() {
           <i className="fas fa-code"></i>
         </NavLink>
         <NavLink exact to="/createuser" className="nav-logo">
-          USERS
+          CREATE USER
           <i className="fas fa-code"></i>
         </NavLink>
         <NavLink exact to="/yourpost" className="nav-logo">

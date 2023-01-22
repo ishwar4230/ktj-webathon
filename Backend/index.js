@@ -1,16 +1,23 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const bodyParser = require(`body-parser`);
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb://pratyush:uknowmebro@ac-r7mlzk7-shard-00-00.vd0egjp.mongodb.net:27017,ac-r7mlzk7-shard-00-01.vd0egjp.mongodb.net:27017,ac-r7mlzk7-shard-00-02.vd0egjp.mongodb.net:27017/?ssl=true&replicaSet=atlas-13wv38-shard-0&authSource=admin&retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose
+  .connect(
+    "mongodb://pratyush:uknowmebro@ac-r7mlzk7-shard-00-00.vd0egjp.mongodb.net:27017,ac-r7mlzk7-shard-00-01.vd0egjp.mongodb.net:27017,ac-r7mlzk7-shard-00-02.vd0egjp.mongodb.net:27017/?ssl=true&replicaSet=atlas-13wv38-shard-0&authSource=admin&retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("database connected");
+  })
+  .catch(() => {
+    console.log("connection failed");
+  });
 
 const cors = require("cors");
 

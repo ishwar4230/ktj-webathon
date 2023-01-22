@@ -1,4 +1,7 @@
-.cwidth{
-    width: 20vw !important;
-    height: 20px !important;
+select{
+    width: 200px;
+    height: 30px;
+    margin: 4px;
+    border: none;
+    border-radius: 5px;
 }

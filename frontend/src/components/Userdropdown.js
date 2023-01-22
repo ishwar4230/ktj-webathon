@@ -1,34 +1,39 @@
-// import * as React from "react";
-// import Box from "@mui/material/Box";
-// import InputLabel from "@mui/material/InputLabel";
-// import MenuItem from "@mui/material/MenuItem";
-// import FormControl from "@mui/material/FormControl";
-// import Select from "@mui/material/Select";
 // import "./userdropdown.css";
 
-// export default function BasicSelect() {
-//   const [age, setAge] = React.useState("");
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
 
-//   const handleChange = (event) => {
-//     setAge(event.target.value);
-//   };
+// function Userdropdown() {
+//   const [user, setUser] = useState([]);
+
+//   const [selectedState, setSelectedState] = useState("");
+
+//   useEffect(() => {
+//     axios
+//       .get("http://localhost:4000/user/all-users")
+//       .then(({ data }) => {
+//         console.log("dncjbhbchbhdbscbbsdcb");
+//         console.log(data);
+//         setUser(data);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   }, []);
 
 //   return (
-//     <Box sx={{ minWidth: 220 }}>
-//       <FormControl className="cwidth">
-//         <InputLabel id="demo-simple-select-label">USERS</InputLabel>
-//         <Select
-//           labelId="demo-simple-select-label"
-//           id="demo-simple-select"
-//           value={age}
-//           label="Age"
-//           onChange={handleChange}
-//         >
-//           <MenuItem value={10}>Ten</MenuItem>
-//           <MenuItem value={20}>Twenty</MenuItem>
-//           <MenuItem value={30}>Thirty</MenuItem>
-//         </Select>
-//       </FormControl>
-//     </Box>
+//     <div>
+//       <select
+//         onChange={(e) => {
+//           setSelectedState(e.target.value);
+//         }}
+//       >
+//         {user.map((user) => {
+//           return <option>{user.username}</option>;
+//         })}
+//       </select>
+//     </div>
 //   );
 // }
+
+// export default Userdropdown;
