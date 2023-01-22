@@ -2,7 +2,7 @@
   
 // post Model
 const postSchema = require("./post.model");
-
+const userSchema = require("../user/user.model")
 
 
 // post/create-post
@@ -54,10 +54,17 @@ exports.allpostMiddleware = async (req, res, next) => { // Here we need to get o
 
 // get-particular user posts
 exports.mypostsMiddleware = async (req, res, next) => {
-  console.log("In the mypostsMiddleware:", req.body.userId)
+  console.log("In the mypostsMiddleware:", req.body.userName);
+  let user = await userSchema.findone({username
+    : req.body.userName});
+  console.log("In the mypostsMiddleware:", user._id);
+  if(user == null){
+    return res.status(403).json({"message":"User Not found"});
+  }
+  await
   postSchema  
     .find({
-      createdBy: req.body.userId,
+      createdBy: user._id,
     })
     .then((data, error) => {
       if (error) {
