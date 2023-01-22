@@ -10,14 +10,18 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
-);
+).then(() => {
+  console.log("Connected to database!");
+}).catch(() => {
+  console.log("Connection failed!");
+});
+
 
 const cors = require("cors");
 
 const userRoutes = require("./user/user.route");
 const requestRoutes = require("./request/request.route");
 const postRoutes = require("./post/post.route");
-const connectDB = require("./configure/mdb");
 
 app.use(bodyParser.json());
 app.use(
@@ -30,7 +34,7 @@ app.use(cors());
 app.use("/user", userRoutes);
 app.use("/request", requestRoutes);
 app.use("/post", postRoutes);
-app.use("/", postRoutes);
+// app.use("/", postRoutes);
 
 // user/create-user
 // user/all-users
@@ -38,11 +42,11 @@ app.use("/", postRoutes);
 // post/create-post
 // post/all-posts  // to get all the posts
 // post/update-post  // to add a request or to change the status of the post
-// post/id:  to get the post created by a particular user with the id
+// post/myposts  to get the post created by a particular user with the id
 
 // request/create-request
-// request/all-request
-// request/update-request  // to change the status of the request here, may need to change the status of the post also if the max no. of participent limit reaches so made the status of the
+// request/all-request // to get all the request for a particular post
+// request/update-request  // to change the status of the request here, may need to change the status of the post also if the max no. of participent limit reaches so made the status of the post to closed and also remove all the request form the request array of the post and also all the request in that post which are pending in that post
 // post to completed
 
 app.listen(PORT, function (error) {

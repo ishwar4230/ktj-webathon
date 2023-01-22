@@ -1,4 +1,4 @@
-let mongoose = require("mongoose")
+
   
 // post Model
 const postSchema = require("./post.model");
